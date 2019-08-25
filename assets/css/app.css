@@ -1,0 +1,790 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-Regular.eot");
+  src: url("../fonts/hinted-OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-Regular.woff") format("woff"), url("../fonts/hinted-OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-ExtraBoldItalic.eot");
+  src: url("../fonts/hinted-OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-ExtraBoldItalic.woff") format("woff"), url("../fonts/hinted-OpenSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-Light.eot");
+  src: url("../fonts/hinted-OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-Light.woff") format("woff"), url("../fonts/hinted-OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-ExtraBold.eot");
+  src: url("../fonts/hinted-OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-ExtraBold.woff") format("woff"), url("../fonts/hinted-OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-Bold.eot");
+  src: url("../fonts/hinted-OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-Bold.woff") format("woff"), url("../fonts/hinted-OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-SemiBold.eot");
+  src: url("../fonts/hinted-OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-SemiBold.woff") format("woff"), url("../fonts/hinted-OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-BoldItalic.eot");
+  src: url("../fonts/hinted-OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-BoldItalic.woff") format("woff"), url("../fonts/hinted-OpenSans-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-LightItalic.eot");
+  src: url("../fonts/hinted-OpenSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-LightItalic.woff") format("woff"), url("../fonts/hinted-OpenSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-SemiBoldItalic.eot");
+  src: url("../fonts/hinted-OpenSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-SemiBoldItalic.woff") format("woff"), url("../fonts/hinted-OpenSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/hinted-OpenSans-Italic.eot");
+  src: url("../fonts/hinted-OpenSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-OpenSans-Italic.woff") format("woff"), url("../fonts/hinted-OpenSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Open sans", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.mb-1 {
+  margin-bottom: 1px;
+}
+
+.mt-1 {
+  margin-top: 1px;
+}
+
+.ml-1 {
+  margin-left: 1px;
+}
+
+.mr-1 {
+  margin-right: 1px;
+}
+
+.mb-2 {
+  margin-bottom: 2px;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+
+.ml-2 {
+  margin-left: 2px;
+}
+
+.mr-2 {
+  margin-right: 2px;
+}
+
+.mb-3 {
+  margin-bottom: 3px;
+}
+
+.mt-3 {
+  margin-top: 3px;
+}
+
+.ml-3 {
+  margin-left: 3px;
+}
+
+.mr-3 {
+  margin-right: 3px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.ml-4 {
+  margin-left: 4px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mb-6 {
+  margin-bottom: 6px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.ml-6 {
+  margin-left: 6px;
+}
+
+.mr-6 {
+  margin-right: 6px;
+}
+
+.mb-7 {
+  margin-bottom: 7px;
+}
+
+.mt-7 {
+  margin-top: 7px;
+}
+
+.ml-7 {
+  margin-left: 7px;
+}
+
+.mr-7 {
+  margin-right: 7px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mb-9 {
+  margin-bottom: 9px;
+}
+
+.mt-9 {
+  margin-top: 9px;
+}
+
+.ml-9 {
+  margin-left: 9px;
+}
+
+.mr-9 {
+  margin-right: 9px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-11 {
+  margin-bottom: 11px;
+}
+
+.mt-11 {
+  margin-top: 11px;
+}
+
+.ml-11 {
+  margin-left: 11px;
+}
+
+.mr-11 {
+  margin-right: 11px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.ml-12 {
+  margin-left: 12px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mb-13 {
+  margin-bottom: 13px;
+}
+
+.mt-13 {
+  margin-top: 13px;
+}
+
+.ml-13 {
+  margin-left: 13px;
+}
+
+.mr-13 {
+  margin-right: 13px;
+}
+
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.mt-14 {
+  margin-top: 14px;
+}
+
+.ml-14 {
+  margin-left: 14px;
+}
+
+.mr-14 {
+  margin-right: 14px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mb-17 {
+  margin-bottom: 17px;
+}
+
+.mt-17 {
+  margin-top: 17px;
+}
+
+.ml-17 {
+  margin-left: 17px;
+}
+
+.mr-17 {
+  margin-right: 17px;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+.mt-18 {
+  margin-top: 18px;
+}
+
+.ml-18 {
+  margin-left: 18px;
+}
+
+.mr-18 {
+  margin-right: 18px;
+}
+
+.mb-19 {
+  margin-bottom: 19px;
+}
+
+.mt-19 {
+  margin-top: 19px;
+}
+
+.ml-19 {
+  margin-left: 19px;
+}
+
+.mr-19 {
+  margin-right: 19px;
+}
+
+a:not(.button):link, a:not(.button):visited, a:not(.button):hover, a:not(.button):active {
+  color: black;
+  text-decoration: underline;
+}
+a:not(.button):hover {
+  color: #b80606;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
+
+.page {
+  display: flex;
+  min-width: 100vw;
+}
+
+.page_header {
+  max-width: 200px;
+  box-shadow: 6px 0px 100px -48px rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 150px;
+  height: auto;
+}
+.logo_link {
+  display: block;
+  padding: 1em;
+}
+
+.horizontal_list li {
+  display: inline-block;
+}
+
+.bg_w {
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+[data-image] {
+  background-size: cover;
+  background-position: center;
+}
+
+.page_main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.page_main section {
+  padding: 0.5em 1em;
+}
+.page_main section .container {
+  display: block;
+  max-width: 700px;
+  margin: 0em auto;
+  padding: 1em;
+}
+
+html body .graphic_introduction {
+  padding-top: 10em;
+}
+html body .graphic_introduction ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+b {
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form label,
+.form input,
+.form textarea {
+  display: inline-block;
+  max-width: 100%;
+}
+.form input:not(.button), .form textarea {
+  margin: 0.1em 1em 1.2em 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  padding: 0.2em;
+}
+.form label {
+  margin-bottom: 0.4em;
+  margin-left: 1em;
+  letter-spacing: 0.1em;
+}
+
+.f-solo {
+  min-width: 40%;
+}
+
+.introduction_list {
+  display: flex;
+}
+.introduction_list figure {
+  margin: 1em;
+}
+.introduction_list figure figcaption {
+  text-align: center;
+  padding: 1em 0;
+}
+
+p {
+  margin-top: 1.5em;
+  line-height: 1.4em;
+}
+
+.site_navigation {
+  padding: 1.8em;
+}
+.site_navigation a:not(.button):link, .site_navigation a:not(.button):visited, .site_navigation a:not(.button):hover, .site_navigation a:not(.button):active {
+  color: black;
+  text-decoration: none;
+}
+.site_navigation a:not(.button):hover {
+  color: #b80606;
+}
+
+.navigation_link {
+  position: relative;
+  padding: 0.8em 0;
+  padding-left: 1.5em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  line-height: 1.4em;
+}
+.navigation_link::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  top: 0.55em;
+  left: -0.4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navigation_link:hover {
+  font-weight: 600;
+  color: #b80606;
+}
+
+.title {
+  color: #b80606;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6em;
+  text-transform: uppercase;
+}
+.title-big {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: inherit;
+}
+
+p.title {
+  padding: 0;
+  margin-top: 0;
+}
+
+.c-darkgrey {
+  color: darkgray;
+}
+
+.c-red {
+  color: #b80606;
+}
+
+.equ_form .line .line, .form .line .line {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.bg_home::before {
+  background-image: url("../images/icons/home.png");
+}
+.bg_donate-equ::before {
+  background-image: url("../images/icons/donation.png");
+}
+.bg_get-equ::before {
+  background-image: url("../images/icons/getting.png");
+}
+.bg_twin::before {
+  background-image: url("../images/icons/twin.png");
+}
+.bg_about::before {
+  background-image: url("../images/icons/about-us.png");
+}
+.bg_profile::before {
+  background-image: url("../images/icons/user_profile.png");
+}
+.bg_login::before {
+  background-image: url("../images/icons/user_login.png");
+}
+.bg_logout::before {
+  background-image: url("../images/icons/user_logout.png");
+}
+
+.account_list {
+  margin-top: 1.5em;
+  border-top: 1px solid black;
+}
+
+.discover_list {
+  display: flex;
+  margin-top: 1.2em;
+}
+.discover_list .discover_element {
+  max-width: 33%;
+  padding: 0.4em;
+}
+.discover_list .discover_img {
+  height: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.discover_list .discover_text {
+  text-align: center;
+}
+.button, .discover_list .discover_button {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #b80606;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  color: #b80606;
+  background-color: #fff;
+  text-decoration: none;
+}
+.button:hover, .discover_list .discover_button:hover {
+  background-color: #b80606;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.user_cell, .user_header {
+  display: inline-block;
+}
+
+.user_header {
+  font-weight: bold;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+
+.equ_form div {
+  margin-bottom: 0.3em;
+}
+.equ_form span {
+  margin-bottom: 1em;
+  display: inline-block;
+}
+.equ_form textarea {
+  margin-bottom: 1em;
+}
+.equ_form input[type=submit] {
+  font-size: 1.1em;
+  margin: 1em;
+}
+.equ_form label {
+  margin-top: 1em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+}
+
+.donation_ordered {
+  counter-reset: donation-counter;
+  list-style-type: none;
+  padding-left: 2em;
+  margin-top: 1em;
+}
+.donation_ordered li {
+  margin: 0 0 1em 0;
+  counter-increment: donation-counter;
+  position: relative;
+  line-height: 1.3em;
+}
+.donation_ordered li::before {
+  content: counter(donation-counter);
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  left: -1em;
+  color: #b80606;
+  opacity: 0.6;
+}
+
+.button, .discover_list .discover_button, .link, .navigation_link, img {
+  transition: 0.3s all ease;
+}
+
+@media screen and (max-width: 935px) {
+  .page_header {
+    max-width: 64px;
+  }
+
+  a.navigation_link {
+    max-width: 15em;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0);
+    height: 1.5em;
+    white-space: nowrap;
+  }
+  a.navigation_link::before {
+    pointer-events: all;
+  }
+
+  .site_navigation a:not(.button):link, .site_navigation a:not(.button):visited, .site_navigation a:not(.button):hover, .site_navigation a:not(.button):active {
+    color: transparent;
+    text-decoration: none;
+  }
+  .site_navigation a:not(.button):hover {
+    color: #b80606;
+  }
+
+  .page_main {
+    margin-left: 64px;
+    margin-right: 20px;
+  }
+  .page_main section, .page_main section .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
